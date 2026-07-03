@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter_24pt-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sora";
+  src: url("/fonts/Sora-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "BitcountGridSingle";
+  src: url("/fonts/BitcountGridSingle-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@theme {
+  --font-Inter: "Inter";
+  --font-Sora: "Sora";
+  --font-BitcountGridSingle: "BitcountGridSingle";
+}
+
+/* ── Modal Animations ── */
+@keyframes clip-reveal-open {
+  from {
+    clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%);
+    opacity: 0;
+  }
+  to {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    opacity: 1;
+  }
+}
+
+@keyframes clip-reveal-close {
+  from {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    opacity: 1;
+  }
+  to {
+    clip-path: polygon(50% 100%, 50% 100%, 50% 0%, 50% 0%);
+    opacity: 0;
+  }
+}
+
+@keyframes modal-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-backdrop-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-clip-reveal-open {
+  animation: clip-reveal-open 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-clip-reveal-close {
+  animation: clip-reveal-close 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-backdrop-in {
+  animation: modal-backdrop-in 0.35s ease-out forwards;
+}
+
+.animate-backdrop-out {
+  animation: modal-backdrop-out 0.3s ease-in forwards;
+}
+
+/* ── SplitText Mask Lines ── */
+.line\+\+ {
+  overflow: hidden;
+  display: block;
+}
+
+.header-line\+\+ {
+  overflow: hidden;
+  display: block;
+}
