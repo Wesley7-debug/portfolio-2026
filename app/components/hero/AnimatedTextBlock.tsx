@@ -13,8 +13,8 @@ export default function AnimatedTextBlock({
   wordsRef,
 }: AnimatedTextBlockProps) {
   return (
-    <div className="relative w-full h-[120px] md:h-[160px] overflow-hidden">
-      <p className="text-base sm:text-lg md:text-xl font-light leading-8 text-zinc-300 tracking-tight text-left flex flex-wrap gap-x-[6px] gap-y-1">
+    <div className="relative w-full h-[110px] md:h-[140px] overflow-hidden">
+      <p className="text-lg sm:text-xl md:text-2xl font-light leading-8 sm:leading-9 md:leading-10 text-zinc-300 tracking-tight text-left flex flex-wrap gap-x-[6px] gap-y-1">
         {text.split(" ").map((word, wordIdx) => (
           <span
             key={wordIdx}

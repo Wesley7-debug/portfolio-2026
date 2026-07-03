@@ -21,10 +21,10 @@ const ACTION_BUTTONS = [
 
 export default function ConnectColumn() {
   return (
-    <div className="flex flex-col space-y-1 h-full justify-between min-h-[180px]">
-      <div className="space-y-1">
+    <div className="flex flex-col space-y-2 h-full justify-between min-h-[220px]">
+      <div className="space-y-2">
         <SectionLabel label="Connect" />
-        <ul className="column-content text-zinc-400 font-light">
+        <ul className="column-content text-zinc-400 font-light text-base sm:text-[16px] space-y-1">
           {CONNECT_LINKS.map((link) => (
             <li key={link.label}>
               <HoverUnderline>
@@ -43,11 +43,11 @@ export default function ConnectColumn() {
       </div>
 
       <div className="column-content space-y-4">
-        <div className="text-[10px] text-zinc-400 font-light leading-tight">
+        <div className="text-[13px] hidden md:block sm:text-[14px] text-zinc-400 font-light leading-tight">
           Available All Year
         </div>
 
-        <div className="flex items-center space-x-2">
+        <div className="flex flex-wrap items-center gap-3">
           {ACTION_BUTTONS.map((btn) => (
             <CornerButton
               key={btn.label}

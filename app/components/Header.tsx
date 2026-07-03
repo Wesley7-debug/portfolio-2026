@@ -51,11 +51,13 @@ export default function Header({ loaded = false }: HeaderProps) {
               </div>
             </div>
             <button
-              onClick={openModal}
-              className=" flex flex-col  transition-colors text-[11px] tracking-wide leading-tight uppercase font-medium  items-end "
+              onClick={isModalOpen ? closeModal : openModal}
+              className="flex flex-col transition-colors text-sm sm:text-base tracking-wide leading-tight uppercase font-semibold items-end"
             >
               Credentials
-              <span className="text-[10px] items-start">open[+]</span>
+              <span className="text-[11px] sm:text-[12px] text-zinc-400 items-start">
+                {isModalOpen ? "close[-]" : "open[+]"}
+              </span>
             </button>
           </div>
         </Fall>

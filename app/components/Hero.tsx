@@ -150,14 +150,14 @@ export default function Hero() {
         ref={containerRef}
         className="relative w-full h-[600vh] font-Inter bg-[#0a0a0a] text-white overflow-x-hidden select-none font-semibold"
       >
-        <div className="fixed inset-0 w-full h-screen overflow-hidden flex flex-col justify-between pt-6 px-6 sm:pt-10 sm:px-10 pb-4 md:pb-0 pointer-events-none z-10">
+        <div className="fixed inset-0 w-full h-screen overflow-hidden flex flex-col justify-between pt-4 px-6 sm:pt-6 sm:px-10 pb-2 md:pb-0 pointer-events-none z-10">
           {/* Scroll Progress Indicator */}
           <ScrollProgressBar fillRef={progressFillRef} />
 
           {/* Bottom Content Area */}
           <div
             ref={bottomRef}
-            className="w-full mt-auto flex flex-col gap-3 md:gap-4"
+            className="w-full mt-auto flex flex-col gap-2 md:gap-3"
           >
             {/* Animated Text Blocks */}
             <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 px-2 md:px-6">

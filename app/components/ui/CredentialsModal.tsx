@@ -1,8 +1,9 @@
 "use client";
 import React, { useEffect, useRef, useCallback } from "react";
 import gsap from "gsap";
-import IntroColumn from "../header/IntroColumn";
 import PositionColumn from "../header/PositionColumn";
+import RecognitionColumn from "../header/RecognitionColumn";
+import BrandsColumn from "../header/BrandsColumn";
 import ConnectColumn from "../header/ConnectColumn";
 import { useLenisContext } from "../LenisProvider";
 
@@ -11,7 +12,13 @@ interface CredentialsModalProps {
   onClose: () => void;
 }
 
-const MOBILE_COLUMNS = [IntroColumn, PositionColumn, ConnectColumn];
+const MOBILE_COLUMNS = [
+  // IntroColumn,
+  PositionColumn,
+  RecognitionColumn,
+  BrandsColumn,
+  ConnectColumn,
+];
 
 export default function CredentialsModal({
   isOpen,
@@ -120,34 +127,24 @@ export default function CredentialsModal({
   return (
     <div
       ref={overlayRef}
-      className="fixed inset-0 z-999 bg-[#0a0a0a] flex flex-col lg:hidden h-screen"
+      className="fixed inset-x-0 top-[5rem] bottom-0 z-999 bg-[#0a0a0a] flex flex-col lg:hidden overflow-y-auto"
       style={{ opacity: 0 }}
       role="dialog"
       aria-modal="true"
     >
-      {/* Close Button */}
-      <div className="flex justify-end p-6 shrink-0">
-        <button
-          onClick={handleClose}
-          className="text-zinc-400 hover:text-white transition-colors text-xs tracking-widest uppercase font-mono"
-        >
-          Close [−]
-        </button>
-      </div>
-
       {/* Content — fits within remaining height, no scroll */}
       <div
         ref={contentRef}
-        className="flex-1 flex flex-col justify-center px-6 pb-12"
+        className="flex-1 flex flex-col justify-between px-5 pb-8 pt-1 sm:px-6 sm:pb-10 sm:pt-2"
       >
-        <div className="grid grid-cols-1 gap-y-8 max-w-lg mx-auto w-full">
+        <div className="grid grid-cols-1 gap-y-6 sm:gap-y-8 min-h-[calc(100vh-88px)] max-w-3xl mx-auto w-full">
           {MOBILE_COLUMNS.map((Column, idx) => (
             <div
               key={idx}
               ref={(el) => {
                 columnsRef.current[idx] = el;
               }}
-              className="text-[13px]"
+              className="text-[16px] sm:text-[18px] py-2"
             >
               <Column />
             </div>

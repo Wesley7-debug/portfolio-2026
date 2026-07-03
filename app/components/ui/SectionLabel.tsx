@@ -43,7 +43,7 @@ export default function SectionLabel({
   }, [animate, delay]);
 
   return (
-    <div className="flex items-center space-x-1.5 text-[#7c52ff] font-semibold uppercase tracking-widest text-[9px]">
+    <div className="flex items-center space-x-1.5 text-[#7c52ff] font-semibold uppercase tracking-widest text-[10px] sm:text-[11px]">
       <span ref={dotRef} className="section-dot">
         ●
       </span>

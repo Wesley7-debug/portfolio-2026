@@ -34,21 +34,23 @@ import TagBadge from "../ui/TagBadge";
 
 export default function PositionColumn() {
   return (
-    <div className="flex flex-col space-y-1">
+    <div className="flex flex-col space-y-2">
       <SectionLabel label="Position" />
       <div className="column-content space-y-3">
-        <div className="space-y-0.5">
-          <p className="text-white font-medium tracking-wide">Freelancer®</p>
-          <p className="text-zinc-400 font-light">
+        <div className="space-y-1">
+          <p className="text-white font-medium tracking-wide text-[16px] sm:text-[18px]">
+            Freelancer®
+          </p>
+          <p className="text-zinc-400 font-light text-base sm:text-[16px]">
             Freelance Fullstack Developer
           </p>
         </div>
         <div className="space-y-1">
           <TagBadge label="Core Expertise" variant="outline" />
-          <p className="text-zinc-300 mt-1.5 font-light">
+          <p className="text-zinc-300 mt-1.5 font-light text-base sm:text-[16px]">
             Next.js • GSAP • Node.js
           </p>
-          <p className="text-zinc-400 font-light">
+          <p className="text-zinc-400 font-light text-base sm:text-[16px]">
             UI/UX Engineering & AI Integration
           </p>
         </div>
