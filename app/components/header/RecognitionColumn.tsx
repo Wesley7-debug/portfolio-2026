@@ -41,7 +41,7 @@ export default function CurrentlyBuildingColumn() {
     <div className="flex flex-col space-y-1">
       <SectionLabel label="Currently Building" />
 
-      <div className="column-content space-y-3">
+      <div className="column-content text-[11px] md:text-[11px] space-y-3">
         <div className="flex flex-wrap gap-1">
           {BUILDING_TAGS.map((tag) => (
             <TagBadge key={tag} label={tag} />

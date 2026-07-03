@@ -74,15 +74,15 @@ export default function IntroColumn() {
             <ProfileAvatar />
 
             <div>
-              <h1 className="font-bold text-white text-[15px] sm:text-[17px] leading-tight tracking-wide">
+              <h1 className="font-bold text-white md:text-[13px] sm:text-[17px] leading-tight tracking-wide">
                 Eugene Fidelis
               </h1>
 
-              <p className="text-zinc-400 font-light mt-0.5 text-base sm:text-[16px]">
+              <p className="text-zinc-400 font-light mt-0.5 md:text-[11px] sm:text-[16px]">
                 Creative Developer
               </p>
 
-              <p className="text-zinc-500 font-mono text-[12px] sm:text-[13px]">
+              <p className="text-zinc-500 font-mono md:text-[11px] sm:text-[13px]">
                 2003
               </p>
             </div>
@@ -94,7 +94,7 @@ export default function IntroColumn() {
             </div>
           </button>
 
-          <div className="space-y-1 text-zinc-400 font-light text-base sm:text-[16px]">
+          <div className="space-y-1 text-zinc-400 font-light text-base md:text-[11px] sm:text-[16px]">
             <p>🇳🇬 Nigeria · {time || "--:--:--"} WAT</p>
             <p>🌍 Available for collaborations.</p>
           </div>

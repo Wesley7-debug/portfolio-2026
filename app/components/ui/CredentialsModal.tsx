@@ -144,7 +144,7 @@ export default function CredentialsModal({
               ref={(el) => {
                 columnsRef.current[idx] = el;
               }}
-              className="text-[16px] sm:text-[18px] py-2"
+              className="text-[18px] md:text-[16px] py-2"
             >
               <Column />
             </div>

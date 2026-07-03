@@ -38,19 +38,19 @@ export default function PositionColumn() {
       <SectionLabel label="Position" />
       <div className="column-content space-y-3">
         <div className="space-y-1">
-          <p className="text-white font-medium tracking-wide text-[16px] sm:text-[18px]">
+          <p className="text-white font-medium tracking-wide text-[15px] md:text-[11px]">
             Freelancer®
           </p>
-          <p className="text-zinc-400 font-light text-base sm:text-[16px]">
+          <p className="text-zinc-400 font-light text-[11px] md:text-[11px]">
             Freelance Fullstack Developer
           </p>
         </div>
         <div className="space-y-1">
           <TagBadge label="Core Expertise" variant="outline" />
-          <p className="text-zinc-300 mt-1.5 font-light text-base sm:text-[16px]">
+          <p className="text-zinc-300 mt-1.5 font-light text-[11px] md:text-[11px]">
             Next.js • GSAP • Node.js
           </p>
-          <p className="text-zinc-400 font-light text-base sm:text-[16px]">
+          <p className="text-zinc-400 font-light text-[11px] md:text-[11px]">
             UI/UX Engineering & AI Integration
           </p>
         </div>

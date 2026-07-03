@@ -8,7 +8,7 @@ interface CornerButtonProps {
 }
 
 const baseStyles =
-  "inline-flex border border-zinc-800/80 hover:border-zinc-600 text-zinc-400 hover:text-white transition-all px-4 py-3 rounded bg-zinc-900/20 relative tracking-wider uppercase text-[13px] sm:text-[14px] font-mono no-underline";
+  "inline-flex border border-zinc-800/80 hover:border-zinc-600 text-zinc-400 hover:text-white transition-all px-3 py-1 rounded bg-zinc-900/20 relative tracking-wider uppercase text-[13px] md:text-[11px] font-mono no-underline";
 
 export default function CornerButton({
   children,
