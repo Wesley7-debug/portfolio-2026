@@ -7,7 +7,7 @@ const CONNECT_LINKS = [
   { label: "LinkedIn", href: "https://linkedin.com/in/wesley-eugene" },
   { label: "Email", href: "mailto:eugenefidelis573@gmail.com" },
   { label: "Twitter/X", href: "https://x.com/slycodez" },
-  { label: "Github", href: "https://github.com/Wesley7-debug connect column" },
+  { label: "Github", href: "https://github.com/Wesley7-debug " },
 ];
 
 const ACTION_BUTTONS = [
