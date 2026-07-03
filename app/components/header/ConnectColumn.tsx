@@ -21,8 +21,8 @@ const ACTION_BUTTONS = [
 
 export default function ConnectColumn() {
   return (
-    <div className="flex flex-col space-y-2 h-full justify-between min-h-[220px]">
-      <div className="space-y-2">
+    <div className="flex flex-col gap-3 sm:gap-2.5 h-auto min-h-0">
+      <div className="space">
         <SectionLabel label="Connect" />
         <ul className="column-content text-zinc-400 font-light text-[11px] md:text-[11px] space-y-1">
           {CONNECT_LINKS.map((link) => (
@@ -42,12 +42,12 @@ export default function ConnectColumn() {
         </ul>
       </div>
 
-      <div className="column-content space-y-4">
-        <div className="text-[13px]   md:text-[11px] sm:text-[14px] text-zinc-400 font-light leading-tight">
+      <div className="column-content md:mt-3 mt-1 space-y-2 sm:space-y-2">
+        <div className="text-[13px]  md:text-[11px] sm:text-[14px] text-zinc-400 font-light leading-tight">
           Available All Year
         </div>
 
-        <div className="flex flex-wrap items-center gap-3">
+        <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
           {ACTION_BUTTONS.map((btn) => (
             <CornerButton
               key={btn.label}

@@ -127,7 +127,7 @@ export default function CredentialsModal({
   return (
     <div
       ref={overlayRef}
-      className="fixed inset-x-0 top-[5rem] bottom-0 z-999 bg-[#0a0a0a] flex flex-col lg:hidden overflow-y-auto"
+      className="fixed inset-x-0 top-17 bottom-0 z-999 bg-[#0a0a0a] flex flex-col lg:hidden overflow-y-auto"
       style={{ opacity: 0 }}
       role="dialog"
       aria-modal="true"
@@ -135,16 +135,16 @@ export default function CredentialsModal({
       {/* Content — fits within remaining height, no scroll */}
       <div
         ref={contentRef}
-        className="flex-1 flex flex-col justify-between px-5 pb-8 pt-1 sm:px-6 sm:pb-10 sm:pt-2"
+        className="flex-1 flex flex-col justify-between px-4 pb-6 pt-0.5 sm:px-6 sm:pb-8 sm:pt-1"
       >
-        <div className="grid grid-cols-1 gap-y-6 sm:gap-y-8 min-h-[calc(100vh-88px)] max-w-3xl mx-auto w-full">
+        <div className="grid grid-cols-1 min-h-[calc(100vh-76px)] max-w-3xl mx-auto w-full">
           {MOBILE_COLUMNS.map((Column, idx) => (
             <div
               key={idx}
               ref={(el) => {
                 columnsRef.current[idx] = el;
               }}
-              className="text-[18px] md:text-[16px] py-2"
+              className="text-[18px] md:text-[16px] py-0.5"
             >
               <Column />
             </div>

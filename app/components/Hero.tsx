@@ -150,17 +150,17 @@ export default function Hero() {
         ref={containerRef}
         className="relative w-full h-[600vh] font-Inter bg-[#0a0a0a] text-white overflow-x-hidden select-none font-semibold"
       >
-        <div className="fixed inset-0 w-full h-screen overflow-hidden flex flex-col justify-between pt-4 px-6 sm:pt-6 sm:px-10 pb-2 md:pb-0 pointer-events-none z-10">
+        <div className="fixed inset-0 w-full h-dvh min-h-dvh overflow-hidden flex flex-col justify-between pt-2 px-4 sm:pt-6 sm:px-10 pb-1.5 sm:pb-0 pointer-events-none z-10">
           {/* Scroll Progress Indicator */}
           <ScrollProgressBar fillRef={progressFillRef} />
 
           {/* Bottom Content Area */}
           <div
             ref={bottomRef}
-            className="w-full mt-auto flex flex-col gap-2 md:gap-3"
+            className="w-full mt-auto flex flex-col gap-1.5 sm:gap-2 md:gap-3"
           >
             {/* Animated Text Blocks */}
-            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 px-2 md:px-6">
+            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-12 px-0 sm:px-2 md:px-6">
               {TEXT_BLOCKS.map((blockText, blockIdx) => (
                 <div key={blockIdx} className="hero-text-block">
                   {blockIdx === 0 ? (
@@ -183,7 +183,7 @@ export default function Hero() {
             </div>
 
             {/* Velocity-Responsive Marquee — pointer-events-auto for hover */}
-            <div className="pointer-events-auto hero-marquee">
+            <div className="pointer-events-auto hero-marquee -mt-2 sm:mt-0">
               <MarqueeSection
                 onProjectClick={handleProjectClick}
                 onProjectHover={handleProjectHover}

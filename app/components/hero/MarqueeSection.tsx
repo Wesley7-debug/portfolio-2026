@@ -69,7 +69,7 @@ export default function MarqueeSection({
   useMarqueeScroll(trackRef, scrollTargetRef);
 
   return (
-    <div className="w-screen -ml-6 sm:-ml-10 overflow-hidden bg-[#0a0a0a] pb-0.5 sm:pb-6 pt-0.5">
+    <div className="w-screen -ml-6 sm:-ml-10 overflow-hidden bg-[#0a0a0a] md:pb-0.5 pb-10 pt-0.5">
       <div
         ref={trackRef}
         className="flex items-center gap-6 whitespace-nowrap will-change-transform"
