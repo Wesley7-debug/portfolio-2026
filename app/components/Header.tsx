@@ -57,7 +57,7 @@ export default function Header({ loaded = false }: HeaderProps) {
                   Creative Web Developer
                 </p>
               </div>
-              <div className="ml-2 flex items-center gap-1.5">
+              <div className="md:ml-2 flex items-center gap-1">
                 <span className="block w-0.5 h-4 bg-zinc-600 group-hover:bg-purple-400 transition-colors rounded-full" />
                 <span className="block w-0.5 h-4 bg-zinc-600 group-hover:bg-purple-400 transition-colors rounded-full" />
                 <span className="block w-0.5 h-4 bg-zinc-600 group-hover:bg-purple-400 transition-colors rounded-full" />
