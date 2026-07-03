@@ -8,6 +8,7 @@ import BrandsColumn from "./header/BrandsColumn";
 import ConnectColumn from "./header/ConnectColumn";
 import ProfileAvatar from "./ui/ProfileAvatar";
 import CredentialsModal from "./ui/CredentialsModal";
+import ProfileModal from "./ui/ProfileModal";
 import Fall from "./Fall";
 
 const COLUMNS = [
@@ -24,9 +25,12 @@ interface HeaderProps {
 
 export default function Header({ loaded = false }: HeaderProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
 
   const openModal = useCallback(() => setIsModalOpen(true), []);
   const closeModal = useCallback(() => setIsModalOpen(false), []);
+  const openProfileModal = useCallback(() => setIsProfileModalOpen(true), []);
+  const closeProfileModal = useCallback(() => setIsProfileModalOpen(false), []);
 
   return (
     <>
@@ -39,7 +43,11 @@ export default function Header({ loaded = false }: HeaderProps) {
           </div>
 
           <div className="flex items-center justify-between lg:hidden">
-            <div className="flex items-center gap-3">
+            <button
+              type="button"
+              onClick={openProfileModal}
+              className="flex items-center gap-3 text-left group"
+            >
               <ProfileAvatar />
               <div className="leading-tight">
                 <h1 className="font-bold text-white text-xs tracking-wide uppercase">
@@ -49,7 +57,12 @@ export default function Header({ loaded = false }: HeaderProps) {
                   Creative Web Developer
                 </p>
               </div>
-            </div>
+              <div className="ml-2 flex items-center gap-1.5">
+                <span className="block w-0.5 h-4 bg-zinc-600 group-hover:bg-purple-400 transition-colors rounded-full" />
+                <span className="block w-0.5 h-4 bg-zinc-600 group-hover:bg-purple-400 transition-colors rounded-full" />
+                <span className="block w-0.5 h-4 bg-zinc-600 group-hover:bg-purple-400 transition-colors rounded-full" />
+              </div>
+            </button>
             <button
               onClick={isModalOpen ? closeModal : openModal}
               className="flex flex-col transition-colors text-sm sm:text-base tracking-wide leading-tight uppercase font-semibold items-end"
@@ -64,6 +77,11 @@ export default function Header({ loaded = false }: HeaderProps) {
       </header>
 
       <CredentialsModal isOpen={isModalOpen} onClose={closeModal} />
+      <ProfileModal
+        isOpen={isProfileModalOpen}
+        onClose={closeProfileModal}
+        imageSrc="/images/fidelis.png"
+      />
     </>
   );
 }
