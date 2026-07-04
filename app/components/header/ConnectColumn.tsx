@@ -14,7 +14,7 @@ const ACTION_BUTTONS = [
   { label: "Contact", href: "mailto:eugenefidelis573@gmail.com" },
   {
     label: "Resume",
-    href: "pdf/Eugene_Fidelis_ATS_Resume_One_Page.pdf",
+    href: "pdf/EugeneFidelisResume.pdf",
     download: true,
   },
 ];
