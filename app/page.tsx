@@ -23,7 +23,7 @@ export const metadata = {
     description:
       "A portfolio showcasing AI product design, motion-rich interfaces, and modern web craftsmanship.",
     type: "website",
-    url: "https://your-domain.com",
+    url: "https://eugene-fidelis.xyz",
     images: [
       {
         url: "/images/fidelis.png",
